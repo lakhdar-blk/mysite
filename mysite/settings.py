@@ -123,13 +123,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import os
 
-# Specify the directory where collected static files will be stored
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
 
-# Specify the directories containing static files
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'assets'),
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR,'static')
 ]
 
-# URL to access static files
-STATIC_URL = '/static/'
+STATIC_ROOT=os.path.join(BASE_DIR,'assests')
+
